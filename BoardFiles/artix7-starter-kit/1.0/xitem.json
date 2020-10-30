@@ -1,0 +1,30 @@
+{
+  "config": {
+    "items": [
+      {
+        "infra": {
+          "name": "xc7a100t-starter-kit", 
+          "display": "Artix-7 XC7A100T Starter Kit",
+          "revision": "1.4", 
+          "description": "Artix-7 XC7A100T Starter Kit",
+          "company": "chinaqmtech.com", 
+          "company_display": "QMTECH", 
+          "author": "John", 
+          "category": "Single Part", 
+          "logo": "board.jpg",
+          "website": "https://www.aliexpress.com/item/4000170003461.html", 
+          "search-keywords": [
+            "artix", 
+            "xc7a100t",
+	    "Starter Kit",
+	    "QMTECH",
+            "board", 
+            "Single Part"
+          ]
+        }
+      }
+    ]
+  },
+  "_major": 1,
+  "_minor": 0
+}

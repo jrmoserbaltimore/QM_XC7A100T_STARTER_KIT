@@ -1,0 +1,9 @@
+* text=auto
+*.xml text eol=lf
+*.json text eol=lf
+.gitattributes text eol=lf
+# Binary files
+*.png binary
+*.jpg binary
+*.pdf binary
+*.zip binary

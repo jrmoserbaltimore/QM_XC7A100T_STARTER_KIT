@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+
+<!-- Copyright (C) 2020 John Moser
+ MIT License
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ License for the specific language governing permissions and limitations
+ under the License. -->
+
+<board schema_version="2.0" vendor="QMTECH" name="xc7a100t-starter-kit" display_name="Artix-7 XC7A100T Starter Kit" url="https://www.aliexpress.com/item/4000170003461.html" preset_file="preset.xml" >
+  <compatible_board_revisions>
+    <revision id="0">1.0</revision>
+  </compatible_board_revisions>
+  <file_version>1.0</file_version>
+  <images>
+    <image name="board.jpg" display_name="QMTECH XC7A100T BOARD" sub_type="board">
+      <description>XC7A100T Starter Kit Board File Image</description>
+    </image>
+  </images>
+  <description>Artix-7 XC7A100T Starter Kit</description>
+  <components>
+    <component name="part0" display_name="Artix-7 XC7A100T Starter Kit" type="fpga" part_name="xc7a100tfgg676-2" pin_map_file="part0_pins.xml" vendor="QMTECH" spec_url="https://github.com/ChinaQMTECH/QM_XC7A100T_STARTER_KIT">
+      <description>FPGA part on the board</description>
+      <parameters>
+        <parameter name="frequency" value="50000000" />
+      </parameters>
+      <interfaces>
+        <!-- U2 GPIO bank -->
+        <!--
+        <interface mode="master" name="user_gpio_u2" type="xilinx.com:interface:gpio_rtl:1.0" of_component="user_gpio_u2">
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="axi_gpio" order="0"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="TRI_I" physical_port="user_gpio_u2_tri_i" dir="in" left="53" right="0"> 
+              <pin_maps>
+                <pin_map port_index="0" component_pin="user_io_u2_7"/>
+                <pin_map port_index="1" component_pin="user_io_u2_8"/>
+                <pin_map port_index="2" component_pin="user_io_u2_9"/>
+                <pin_map port_index="3" component_pin="user_io_u2_10"/>
+                <pin_map port_index="4" component_pin="user_io_u2_11"/>
+                <pin_map port_index="5" component_pin="user_io_u2_12"/>
+                <pin_map port_index="6" component_pin="user_io_u2_13"/>
+                <pin_map port_index="7" component_pin="user_io_u2_14"/>
+                <pin_map port_index="8" component_pin="user_io_u2_15"/>
+                <pin_map port_index="9" component_pin="user_io_u2_16"/>
+                <pin_map port_index="10" component_pin="user_io_u2_17"/>
+                <pin_map port_index="11" component_pin="user_io_u2_18"/>
+                <pin_map port_index="12" component_pin="user_io_u2_19"/>
+                <pin_map port_index="13" component_pin="user_io_u2_20"/>
+                <pin_map port_index="14" component_pin="user_io_u2_21"/>
+                <pin_map port_index="15" component_pin="user_io_u2_22"/>
+                <pin_map port_index="16" component_pin="user_io_u2_23"/>
+                <pin_map port_index="17" component_pin="user_io_u2_24"/>
+                <pin_map port_index="18" component_pin="user_io_u2_25"/>
+                <pin_map port_index="19" component_pin="user_io_u2_26"/>
+                <pin_map port_index="20" component_pin="user_io_u2_27"/>
+                <pin_map port_index="21" component_pin="user_io_u2_28"/>
+                <pin_map port_index="22" component_pin="user_io_u2_29"/>
+                <pin_map port_index="23" component_pin="user_io_u2_30"/>
+                <pin_map port_index="24" component_pin="user_io_u2_31"/>
+                <pin_map port_index="25" component_pin="user_io_u2_32"/>
+                <pin_map port_index="26" component_pin="user_io_u2_33"/>
+                <pin_map port_index="27" component_pin="user_io_u2_34"/>
+                <pin_map port_index="28" component_pin="user_io_u2_35"/>
+                <pin_map port_index="29" component_pin="user_io_u2_36"/>
+                <pin_map port_index="30" component_pin="user_io_u2_37"/>
+                <pin_map port_index="31" component_pin="user_io_u2_38"/>
+                <pin_map port_index="32" component_pin="user_io_u2_39"/>
+                <pin_map port_index="33" component_pin="user_io_u2_40"/>
+                <pin_map port_index="34" component_pin="user_io_u2_41"/>
+                <pin_map port_index="35" component_pin="user_io_u2_42"/>
+                <pin_map port_index="36" component_pin="user_io_u2_43"/>
+                <pin_map port_index="37" component_pin="user_io_u2_44"/>
+                <pin_map port_index="38" component_pin="user_io_u2_45"/>
+                <pin_map port_index="39" component_pin="user_io_u2_46"/>
+                <pin_map port_index="40" component_pin="user_io_u2_47"/>
+                <pin_map port_index="41" component_pin="user_io_u2_48"/>
+                <pin_map port_index="42" component_pin="user_io_u2_49"/>
+                <pin_map port_index="43" component_pin="user_io_u2_50"/>
+                <pin_map port_index="44" component_pin="user_io_u2_51"/>
+                <pin_map port_index="45" component_pin="user_io_u2_52"/>
+                <pin_map port_index="46" component_pin="user_io_u2_53"/>
+                <pin_map port_index="47" component_pin="user_io_u2_54"/>
+                <pin_map port_index="48" component_pin="user_io_u2_55"/>
+                <pin_map port_index="49" component_pin="user_io_u2_56"/>
+                <pin_map port_index="50" component_pin="user_io_u2_57"/>
+                <pin_map port_index="51" component_pin="user_io_u2_58"/>
+                <pin_map port_index="52" component_pin="user_io_u2_59"/>
+                <pin_map port_index="53" component_pin="user_io_u2_60"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="TRI_O" physical_port="user_gpio_u2_tri_o" dir="out" left="53" right="0"> 
+              <pin_maps>
+                <pin_map port_index="0" component_pin="user_io_u2_7"/>
+                <pin_map port_index="1" component_pin="user_io_u2_8"/>
+                <pin_map port_index="2" component_pin="user_io_u2_9"/>
+                <pin_map port_index="3" component_pin="user_io_u2_10"/>
+                <pin_map port_index="4" component_pin="user_io_u2_11"/>
+                <pin_map port_index="5" component_pin="user_io_u2_12"/>
+                <pin_map port_index="6" component_pin="user_io_u2_13"/>
+                <pin_map port_index="7" component_pin="user_io_u2_14"/>
+                <pin_map port_index="8" component_pin="user_io_u2_15"/>
+                <pin_map port_index="9" component_pin="user_io_u2_16"/>
+                <pin_map port_index="10" component_pin="user_io_u2_17"/>
+                <pin_map port_index="11" component_pin="user_io_u2_18"/>
+                <pin_map port_index="12" component_pin="user_io_u2_19"/>
+                <pin_map port_index="13" component_pin="user_io_u2_20"/>
+                <pin_map port_index="14" component_pin="user_io_u2_21"/>
+                <pin_map port_index="15" component_pin="user_io_u2_22"/>
+                <pin_map port_index="16" component_pin="user_io_u2_23"/>
+                <pin_map port_index="17" component_pin="user_io_u2_24"/>
+                <pin_map port_index="18" component_pin="user_io_u2_25"/>
+                <pin_map port_index="19" component_pin="user_io_u2_26"/>
+                <pin_map port_index="20" component_pin="user_io_u2_27"/>
+                <pin_map port_index="21" component_pin="user_io_u2_28"/>
+                <pin_map port_index="22" component_pin="user_io_u2_29"/>
+                <pin_map port_index="23" component_pin="user_io_u2_30"/>
+                <pin_map port_index="24" component_pin="user_io_u2_31"/>
+                <pin_map port_index="25" component_pin="user_io_u2_32"/>
+                <pin_map port_index="26" component_pin="user_io_u2_33"/>
+                <pin_map port_index="27" component_pin="user_io_u2_34"/>
+                <pin_map port_index="28" component_pin="user_io_u2_35"/>
+                <pin_map port_index="29" component_pin="user_io_u2_36"/>
+                <pin_map port_index="30" component_pin="user_io_u2_37"/>
+                <pin_map port_index="31" component_pin="user_io_u2_38"/>
+                <pin_map port_index="32" component_pin="user_io_u2_39"/>
+                <pin_map port_index="33" component_pin="user_io_u2_40"/>
+                <pin_map port_index="34" component_pin="user_io_u2_41"/>
+                <pin_map port_index="35" component_pin="user_io_u2_42"/>
+                <pin_map port_index="36" component_pin="user_io_u2_43"/>
+                <pin_map port_index="37" component_pin="user_io_u2_44"/>
+                <pin_map port_index="38" component_pin="user_io_u2_45"/>
+                <pin_map port_index="39" component_pin="user_io_u2_46"/>
+                <pin_map port_index="40" component_pin="user_io_u2_47"/>
+                <pin_map port_index="41" component_pin="user_io_u2_48"/>
+                <pin_map port_index="42" component_pin="user_io_u2_49"/>
+                <pin_map port_index="43" component_pin="user_io_u2_50"/>
+                <pin_map port_index="44" component_pin="user_io_u2_51"/>
+                <pin_map port_index="45" component_pin="user_io_u2_52"/>
+                <pin_map port_index="46" component_pin="user_io_u2_53"/>
+                <pin_map port_index="47" component_pin="user_io_u2_54"/>
+                <pin_map port_index="48" component_pin="user_io_u2_55"/>
+                <pin_map port_index="49" component_pin="user_io_u2_56"/>
+                <pin_map port_index="50" component_pin="user_io_u2_57"/>
+                <pin_map port_index="51" component_pin="user_io_u2_58"/>
+                <pin_map port_index="52" component_pin="user_io_u2_59"/>
+                <pin_map port_index="53" component_pin="user_io_u2_60"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="TRI_T" physical_port="user_gpio_u2_tri_t" dir="out" left="53" right="0"> 
+              <pin_maps>
+                <pin_map port_index="0" component_pin="user_io_u2_7"/>
+                <pin_map port_index="1" component_pin="user_io_u2_8"/>
+                <pin_map port_index="2" component_pin="user_io_u2_9"/>
+                <pin_map port_index="3" component_pin="user_io_u2_10"/>
+                <pin_map port_index="4" component_pin="user_io_u2_11"/>
+                <pin_map port_index="5" component_pin="user_io_u2_12"/>
+                <pin_map port_index="6" component_pin="user_io_u2_13"/>
+                <pin_map port_index="7" component_pin="user_io_u2_14"/>
+                <pin_map port_index="8" component_pin="user_io_u2_15"/>
+                <pin_map port_index="9" component_pin="user_io_u2_16"/>
+                <pin_map port_index="10" component_pin="user_io_u2_17"/>
+                <pin_map port_index="11" component_pin="user_io_u2_18"/>
+                <pin_map port_index="12" component_pin="user_io_u2_19"/>
+                <pin_map port_index="13" component_pin="user_io_u2_20"/>
+                <pin_map port_index="14" component_pin="user_io_u2_21"/>
+                <pin_map port_index="15" component_pin="user_io_u2_22"/>
+                <pin_map port_index="16" component_pin="user_io_u2_23"/>
+                <pin_map port_index="17" component_pin="user_io_u2_24"/>
+                <pin_map port_index="18" component_pin="user_io_u2_25"/>
+                <pin_map port_index="19" component_pin="user_io_u2_26"/>
+                <pin_map port_index="20" component_pin="user_io_u2_27"/>
+                <pin_map port_index="21" component_pin="user_io_u2_28"/>
+                <pin_map port_index="22" component_pin="user_io_u2_29"/>
+                <pin_map port_index="23" component_pin="user_io_u2_30"/>
+                <pin_map port_index="24" component_pin="user_io_u2_31"/>
+                <pin_map port_index="25" component_pin="user_io_u2_32"/>
+                <pin_map port_index="26" component_pin="user_io_u2_33"/>
+                <pin_map port_index="27" component_pin="user_io_u2_34"/>
+                <pin_map port_index="28" component_pin="user_io_u2_35"/>
+                <pin_map port_index="29" component_pin="user_io_u2_36"/>
+                <pin_map port_index="30" component_pin="user_io_u2_37"/>
+                <pin_map port_index="31" component_pin="user_io_u2_38"/>
+                <pin_map port_index="32" component_pin="user_io_u2_39"/>
+                <pin_map port_index="33" component_pin="user_io_u2_40"/>
+                <pin_map port_index="34" component_pin="user_io_u2_41"/>
+                <pin_map port_index="35" component_pin="user_io_u2_42"/>
+                <pin_map port_index="36" component_pin="user_io_u2_43"/>
+                <pin_map port_index="37" component_pin="user_io_u2_44"/>
+                <pin_map port_index="38" component_pin="user_io_u2_45"/>
+                <pin_map port_index="39" component_pin="user_io_u2_46"/>
+                <pin_map port_index="40" component_pin="user_io_u2_47"/>
+                <pin_map port_index="41" component_pin="user_io_u2_48"/>
+                <pin_map port_index="42" component_pin="user_io_u2_49"/>
+                <pin_map port_index="43" component_pin="user_io_u2_50"/>
+                <pin_map port_index="44" component_pin="user_io_u2_51"/>
+                <pin_map port_index="45" component_pin="user_io_u2_52"/>
+                <pin_map port_index="46" component_pin="user_io_u2_53"/>
+                <pin_map port_index="47" component_pin="user_io_u2_54"/>
+                <pin_map port_index="48" component_pin="user_io_u2_55"/>
+                <pin_map port_index="49" component_pin="user_io_u2_56"/>
+                <pin_map port_index="50" component_pin="user_io_u2_57"/>
+                <pin_map port_index="51" component_pin="user_io_u2_58"/>
+                <pin_map port_index="52" component_pin="user_io_u2_59"/>
+                <pin_map port_index="53" component_pin="user_io_u2_60"/>
+              </pin_maps>
+            </port_map>
+          </port_maps>
+        </interface>
+-->
+        <!-- U4 GPIO bank -->
+        <!--
+        <interface mode="master" name="user_gpio_u4" type="xilinx.com:interface:gpio_rtl:1.0" of_component="user_gpio_u4">
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="axi_gpio" order="0"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="TRI_I" physical_port="user_gpio_u4_tri_i" dir="in" left="53" right="0"> 
+              <pin_maps>
+                <pin_map port_index="0" component_pin="user_io_u4_7"/>
+                <pin_map port_index="1" component_pin="user_io_u4_8"/>
+                <pin_map port_index="2" component_pin="user_io_u4_9"/>
+                <pin_map port_index="3" component_pin="user_io_u4_10"/>
+                <pin_map port_index="4" component_pin="user_io_u4_11"/>
+                <pin_map port_index="5" component_pin="user_io_u4_12"/>
+                <pin_map port_index="6" component_pin="user_io_u4_13"/>
+                <pin_map port_index="7" component_pin="user_io_u4_14"/>
+                <pin_map port_index="8" component_pin="user_io_u4_15"/>
+                <pin_map port_index="9" component_pin="user_io_u4_16"/>
+                <pin_map port_index="10" component_pin="user_io_u4_17"/>
+                <pin_map port_index="11" component_pin="user_io_u4_18"/>
+                <pin_map port_index="12" component_pin="user_io_u4_19"/>
+                <pin_map port_index="13" component_pin="user_io_u4_20"/>
+                <pin_map port_index="14" component_pin="user_io_u4_21"/>
+                <pin_map port_index="15" component_pin="user_io_u4_22"/>
+                <pin_map port_index="16" component_pin="user_io_u4_23"/>
+                <pin_map port_index="17" component_pin="user_io_u4_24"/>
+                <pin_map port_index="18" component_pin="user_io_u4_25"/>
+                <pin_map port_index="19" component_pin="user_io_u4_26"/>
+                <pin_map port_index="20" component_pin="user_io_u4_27"/>
+                <pin_map port_index="21" component_pin="user_io_u4_28"/>
+                <pin_map port_index="22" component_pin="user_io_u4_29"/>
+                <pin_map port_index="23" component_pin="user_io_u4_30"/>
+                <pin_map port_index="24" component_pin="user_io_u4_31"/>
+                <pin_map port_index="25" component_pin="user_io_u4_32"/>
+                <pin_map port_index="26" component_pin="user_io_u4_33"/>
+                <pin_map port_index="27" component_pin="user_io_u4_34"/>
+                <pin_map port_index="28" component_pin="user_io_u4_35"/>
+                <pin_map port_index="29" component_pin="user_io_u4_36"/>
+                <pin_map port_index="30" component_pin="user_io_u4_37"/>
+                <pin_map port_index="31" component_pin="user_io_u4_38"/>
+                <pin_map port_index="32" component_pin="user_io_u4_39"/>
+                <pin_map port_index="33" component_pin="user_io_u4_40"/>
+                <pin_map port_index="34" component_pin="user_io_u4_41"/>
+                <pin_map port_index="35" component_pin="user_io_u4_42"/>
+                <pin_map port_index="36" component_pin="user_io_u4_43"/>
+                <pin_map port_index="37" component_pin="user_io_u4_44"/>
+                <pin_map port_index="38" component_pin="user_io_u4_45"/>
+                <pin_map port_index="39" component_pin="user_io_u4_46"/>
+                <pin_map port_index="40" component_pin="user_io_u4_47"/>
+                <pin_map port_index="41" component_pin="user_io_u4_48"/>
+                <pin_map port_index="42" component_pin="user_io_u4_49"/>
+                <pin_map port_index="43" component_pin="user_io_u4_50"/>
+                <pin_map port_index="44" component_pin="user_io_u4_51"/>
+                <pin_map port_index="45" component_pin="user_io_u4_52"/>
+                <pin_map port_index="46" component_pin="user_io_u4_53"/>
+                <pin_map port_index="47" component_pin="user_io_u4_54"/>
+                <pin_map port_index="48" component_pin="user_io_u4_55"/>
+                <pin_map port_index="49" component_pin="user_io_u4_56"/>
+                <pin_map port_index="50" component_pin="user_io_u4_57"/>
+                <pin_map port_index="51" component_pin="user_io_u4_58"/>
+                <pin_map port_index="52" component_pin="user_io_u4_59"/>
+                <pin_map port_index="53" component_pin="user_io_u4_60"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="TRI_O" physical_port="user_gpio_u4_tri_o" dir="out" left="53" right="0"> 
+              <pin_maps>
+                <pin_map port_index="0" component_pin="user_io_u4_7"/>
+                <pin_map port_index="1" component_pin="user_io_u4_8"/>
+                <pin_map port_index="2" component_pin="user_io_u4_9"/>
+                <pin_map port_index="3" component_pin="user_io_u4_10"/>
+                <pin_map port_index="4" component_pin="user_io_u4_11"/>
+                <pin_map port_index="5" component_pin="user_io_u4_12"/>
+                <pin_map port_index="6" component_pin="user_io_u4_13"/>
+                <pin_map port_index="7" component_pin="user_io_u4_14"/>
+                <pin_map port_index="8" component_pin="user_io_u4_15"/>
+                <pin_map port_index="9" component_pin="user_io_u4_16"/>
+                <pin_map port_index="10" component_pin="user_io_u4_17"/>
+                <pin_map port_index="11" component_pin="user_io_u4_18"/>
+                <pin_map port_index="12" component_pin="user_io_u4_19"/>
+                <pin_map port_index="13" component_pin="user_io_u4_20"/>
+                <pin_map port_index="14" component_pin="user_io_u4_21"/>
+                <pin_map port_index="15" component_pin="user_io_u4_22"/>
+                <pin_map port_index="16" component_pin="user_io_u4_23"/>
+                <pin_map port_index="17" component_pin="user_io_u4_24"/>
+                <pin_map port_index="18" component_pin="user_io_u4_25"/>
+                <pin_map port_index="19" component_pin="user_io_u4_26"/>
+                <pin_map port_index="20" component_pin="user_io_u4_27"/>
+                <pin_map port_index="21" component_pin="user_io_u4_28"/>
+                <pin_map port_index="22" component_pin="user_io_u4_29"/>
+                <pin_map port_index="23" component_pin="user_io_u4_30"/>
+                <pin_map port_index="24" component_pin="user_io_u4_31"/>
+                <pin_map port_index="25" component_pin="user_io_u4_32"/>
+                <pin_map port_index="26" component_pin="user_io_u4_33"/>
+                <pin_map port_index="27" component_pin="user_io_u4_34"/>
+                <pin_map port_index="28" component_pin="user_io_u4_35"/>
+                <pin_map port_index="29" component_pin="user_io_u4_36"/>
+                <pin_map port_index="30" component_pin="user_io_u4_37"/>
+                <pin_map port_index="31" component_pin="user_io_u4_38"/>
+                <pin_map port_index="32" component_pin="user_io_u4_39"/>
+                <pin_map port_index="33" component_pin="user_io_u4_40"/>
+                <pin_map port_index="34" component_pin="user_io_u4_41"/>
+                <pin_map port_index="35" component_pin="user_io_u4_42"/>
+                <pin_map port_index="36" component_pin="user_io_u4_43"/>
+                <pin_map port_index="37" component_pin="user_io_u4_44"/>
+                <pin_map port_index="38" component_pin="user_io_u4_45"/>
+                <pin_map port_index="39" component_pin="user_io_u4_46"/>
+                <pin_map port_index="40" component_pin="user_io_u4_47"/>
+                <pin_map port_index="41" component_pin="user_io_u4_48"/>
+                <pin_map port_index="42" component_pin="user_io_u4_49"/>
+                <pin_map port_index="43" component_pin="user_io_u4_50"/>
+                <pin_map port_index="44" component_pin="user_io_u4_51"/>
+                <pin_map port_index="45" component_pin="user_io_u4_52"/>
+                <pin_map port_index="46" component_pin="user_io_u4_53"/>
+                <pin_map port_index="47" component_pin="user_io_u4_54"/>
+                <pin_map port_index="48" component_pin="user_io_u4_55"/>
+                <pin_map port_index="49" component_pin="user_io_u4_56"/>
+                <pin_map port_index="50" component_pin="user_io_u4_57"/>
+                <pin_map port_index="51" component_pin="user_io_u4_58"/>
+                <pin_map port_index="52" component_pin="user_io_u4_59"/>
+                <pin_map port_index="53" component_pin="user_io_u4_60"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="TRI_T" physical_port="user_gpio_u4_tri_t" dir="out" left="53" right="0"> 
+              <pin_maps>
+                <pin_map port_index="0" component_pin="user_io_u4_7"/>
+                <pin_map port_index="1" component_pin="user_io_u4_8"/>
+                <pin_map port_index="2" component_pin="user_io_u4_9"/>
+                <pin_map port_index="3" component_pin="user_io_u4_10"/>
+                <pin_map port_index="4" component_pin="user_io_u4_11"/>
+                <pin_map port_index="5" component_pin="user_io_u4_12"/>
+                <pin_map port_index="6" component_pin="user_io_u4_13"/>
+                <pin_map port_index="7" component_pin="user_io_u4_14"/>
+                <pin_map port_index="8" component_pin="user_io_u4_15"/>
+                <pin_map port_index="9" component_pin="user_io_u4_16"/>
+                <pin_map port_index="10" component_pin="user_io_u4_17"/>
+                <pin_map port_index="11" component_pin="user_io_u4_18"/>
+                <pin_map port_index="12" component_pin="user_io_u4_19"/>
+                <pin_map port_index="13" component_pin="user_io_u4_20"/>
+                <pin_map port_index="14" component_pin="user_io_u4_21"/>
+                <pin_map port_index="15" component_pin="user_io_u4_22"/>
+                <pin_map port_index="16" component_pin="user_io_u4_23"/>
+                <pin_map port_index="17" component_pin="user_io_u4_24"/>
+                <pin_map port_index="18" component_pin="user_io_u4_25"/>
+                <pin_map port_index="19" component_pin="user_io_u4_26"/>
+                <pin_map port_index="20" component_pin="user_io_u4_27"/>
+                <pin_map port_index="21" component_pin="user_io_u4_28"/>
+                <pin_map port_index="22" component_pin="user_io_u4_29"/>
+                <pin_map port_index="23" component_pin="user_io_u4_30"/>
+                <pin_map port_index="24" component_pin="user_io_u4_31"/>
+                <pin_map port_index="25" component_pin="user_io_u4_32"/>
+                <pin_map port_index="26" component_pin="user_io_u4_33"/>
+                <pin_map port_index="27" component_pin="user_io_u4_34"/>
+                <pin_map port_index="28" component_pin="user_io_u4_35"/>
+                <pin_map port_index="29" component_pin="user_io_u4_36"/>
+                <pin_map port_index="30" component_pin="user_io_u4_37"/>
+                <pin_map port_index="31" component_pin="user_io_u4_38"/>
+                <pin_map port_index="32" component_pin="user_io_u4_39"/>
+                <pin_map port_index="33" component_pin="user_io_u4_40"/>
+                <pin_map port_index="34" component_pin="user_io_u4_41"/>
+                <pin_map port_index="35" component_pin="user_io_u4_42"/>
+                <pin_map port_index="36" component_pin="user_io_u4_43"/>
+                <pin_map port_index="37" component_pin="user_io_u4_44"/>
+                <pin_map port_index="38" component_pin="user_io_u4_45"/>
+                <pin_map port_index="39" component_pin="user_io_u4_46"/>
+                <pin_map port_index="40" component_pin="user_io_u4_47"/>
+                <pin_map port_index="41" component_pin="user_io_u4_48"/>
+                <pin_map port_index="42" component_pin="user_io_u4_49"/>
+                <pin_map port_index="43" component_pin="user_io_u4_50"/>
+                <pin_map port_index="44" component_pin="user_io_u4_51"/>
+                <pin_map port_index="45" component_pin="user_io_u4_52"/>
+                <pin_map port_index="46" component_pin="user_io_u4_53"/>
+                <pin_map port_index="47" component_pin="user_io_u4_54"/>
+                <pin_map port_index="48" component_pin="user_io_u4_55"/>
+                <pin_map port_index="49" component_pin="user_io_u4_56"/>
+                <pin_map port_index="50" component_pin="user_io_u4_57"/>
+                <pin_map port_index="51" component_pin="user_io_u4_58"/>
+                <pin_map port_index="52" component_pin="user_io_u4_59"/>
+                <pin_map port_index="53" component_pin="user_io_u4_60"/>
+              </pin_maps>
+            </port_map>
+          </port_maps>
+        </interface>
+        -->
+      </interfaces>
+    </component>
+
+    <component name="ddr3_sdram" display_name="DDR3 SDRAM" type="chip" sub_type="ddr" major_group="External Memory">
+      <description>256 MB DDR3 memory component</description>
+      <parameters>
+            <parameter name="ddr_type" value="ddr3"/>
+            <parameter name="size" value="256MB"/>
+      </parameters>
+    </component>
+
+    <component name="user_gpio_u2" display_name="User I/O Bank U2" type="chip" sub_type="led" major_group="GPIO">
+  	  <description>The I/O connector marked U2 on the schematic</description>
+    </component>
+
+    <component name="user_gpio_u4" display_name="User I/O Bank U2" type="chip" sub_type="led" major_group="GPIO">
+  	  <description>The I/O connector marked U4 on the schematic</description>
+    </component>
+  </components>
+
+  <jtag_chains>
+    <jtag_chain name="chain1">
+      <position name="0" component="part0"/>
+    </jtag_chain>
+  </jtag_chains>
+  <connections>
+  <!--
+    <connection name="fpga_gpio_u2" component1="part0" component2="user_gpio_u2">
+      <connection_map name="fpga_gpio_u2_c" c1_st_index="0" c1_end_index="53" c2_st_index="0" c2_end_index="53" />
+    </connection>
+    <connection name="fpga_gpio_u4" component1="part0" component2="user_gpio_u4">
+      <connection_map name="fpga_gpio_u4_c" c1_st_index="54" c1_end_index="107" c2_st_index="0" c2_end_index="53" />
+    </connection>-->
+  </connections>
+</board>
